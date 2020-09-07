@@ -4,5 +4,5 @@
 2. Then add and commit the build folder with `git add` and `git commit`
 3. And then push the build folder to the `gh-pages` branch with
 ```cassandraql
-git subtree push --prefix build origin gh-pages
+git subtree push --prefix my_site/build origin gh-pages
 ```
