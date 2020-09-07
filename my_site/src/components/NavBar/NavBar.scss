@@ -1,0 +1,17 @@
+@mixin base-header {
+}
+
+.fixed-header {
+  @include base-header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.absolute-header {
+  @include base-header;
+  top: 700px;
+  left: 0px;
+  right: 0px;
+}
