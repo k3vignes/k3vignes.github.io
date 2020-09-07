@@ -6,3 +6,12 @@
 ```cassandraql
 git subtree push --prefix my_site/build origin gh-pages
 ```
+
+## Force push
+```cassandraql
+git checkout master 
+git add my_site/build && git commit -m "update build"
+git subtree split --prefix mysite/build -b gh-pages
+git push -f origin gh-pages:gh-pages
+git branch -D gh-pages
+```
