@@ -1,0 +1,30 @@
+@mixin parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 700px;
+}
+
+.headerParallax {
+  @include parallax;
+  background-image: url("../../assets/images/laptop-coffee.jpg");
+}
+
+.aboutMeParallax {
+  @include parallax;
+  background-image: url("../../assets/images/aboutMe.jpg");
+}
+
+.contactParallax {
+  @include parallax;
+  background-image: url("../../assets/images/contact.jpg");
+}
+
+.header-font {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
