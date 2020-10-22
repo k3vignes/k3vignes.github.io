@@ -26,15 +26,11 @@ export const MyNavbar: React.FC = () => {
         document.body.scrollTop > window.innerHeight
       ) {
         setNavbarState({navbarClass: "fixed-header", displayPlaceholder: true});
-        console.log("fixed");
-        console.log(document.documentElement.scrollTop);
       } else if (
         document.documentElement.scrollTop < window.innerHeight ||
         document.body.scrollTop < window.innerHeight
       ) {
         setNavbarState({navbarClass: "absolute-header", displayPlaceholder: false});
-        console.log("absolute")
-        console.log(document.documentElement.scrollTop);
       }
     };
     window.addEventListener("scroll", updateNavbarClass);
@@ -44,20 +40,6 @@ export const MyNavbar: React.FC = () => {
   });
 
   return (
-    /*<Navbar className={navbarClass} expand="lg" color="dark">
-      <Container>
-        <div className="">
-          <Link
-            to=""
-            className=""
-            smooth={true}
-            duration={1000}
-          >
-            Tunes
-          </Link>
-        </div>
-      </Container>
-    </Navbar>*/
     <>
         <div className={navbarState.navbarClass}>
           <Navbar bg={"dark"} variant={"dark"}>
