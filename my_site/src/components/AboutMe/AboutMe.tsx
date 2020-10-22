@@ -1,7 +1,6 @@
 import React from 'react';
 import { Parallax } from "../Parallax/Parallax";
 import { Card } from "../Card/Card";
-import './AboutMe.scss';
 
 export const AboutMe: React.FC = () => {
 
