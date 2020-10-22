@@ -2,6 +2,7 @@ import {
   Nav, Navbar,
   NavItem,
   NavLink,
+  NavDropdown
 } from "react-bootstrap";
 import "./NavBar.scss";
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -21,15 +22,15 @@ export const MyNavbar: React.FC = () => {
   useEffect(() => {
     const updateNavbarClass = () => {
       if (
-        document.documentElement.scrollTop > 700 ||
-        document.body.scrollTop > 700
+        document.documentElement.scrollTop > window.innerHeight ||
+        document.body.scrollTop > window.innerHeight
       ) {
         setNavbarState({navbarClass: "fixed-header", displayPlaceholder: true});
         console.log("fixed");
         console.log(document.documentElement.scrollTop);
       } else if (
-        document.documentElement.scrollTop < 699 ||
-        document.body.scrollTop < 699
+        document.documentElement.scrollTop < window.innerHeight ||
+        document.body.scrollTop < window.innerHeight
       ) {
         setNavbarState({navbarClass: "absolute-header", displayPlaceholder: false});
         console.log("absolute")
@@ -62,17 +63,21 @@ export const MyNavbar: React.FC = () => {
           <Navbar bg={"dark"} variant={"dark"}>
             <Nav>
               <NavItem>
-                <NavLink>About Me</NavLink>
+                <NavLink href={"https://ca.linkedin.com/in/kajan-vigneswaran-292287106"} target={"_blank"}>
+                  LinkedIn
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>Resume</NavLink>
+                <NavLink href={"https://github.com/k3vignes"} target={"_blank"}>GitHub</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>Portfolio</NavLink>
+                <NavLink href={"./Resume.pdf"} target={"_blank"}>Resume</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href={""}>GitHub</NavLink>
-              </NavItem>
+              <NavDropdown id={"portfolio"} title={"Portfolio"}>
+                <NavDropdown.Item href={"https://tunes-dev.appspot.com"} target={"_blank"}>
+                  Tunes
+                </NavDropdown.Item>
+              </NavDropdown>
             </Nav>
           </Navbar>
         </div>

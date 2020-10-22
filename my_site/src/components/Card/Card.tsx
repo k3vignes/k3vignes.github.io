@@ -10,12 +10,12 @@ export const Card: React.FC<ICardProps> = props => {
 
   return (
     <div className={"container"}>
-         <div>
+         <div className={"leftHalf"}>
           <h1>
             {props.title}
           </h1>
         </div>
-        <div>
+        <div className={"rightHalf"}>
             {props.description}
         </div>
     </div>

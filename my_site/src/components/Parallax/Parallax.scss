@@ -4,21 +4,23 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 700px;
 }
 
 .headerParallax {
   @include parallax;
+  min-height: 100vh;
   background-image: url("../../assets/images/laptop-coffee.jpg");
 }
 
 .aboutMeParallax {
   @include parallax;
+  min-height: 80vh;
   background-image: url("../../assets/images/aboutMe.jpg");
 }
 
 .contactParallax {
   @include parallax;
+  min-height: 80vh;
   background-image: url("../../assets/images/contact.jpg");
 }
 

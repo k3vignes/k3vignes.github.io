@@ -10,7 +10,7 @@ import { Contact } from "./components/Contact/Contact";
 
 export const App: React.FC = () => {
   return (
-    <div>
+    <div className={"page"}>
       <Parallax cssClass={"headerParallax"} headerText={"Kajan Vigneswaran - Software Engineer"} />
       <MyNavbar />
       <Home />
