@@ -1,0 +1,31 @@
+@mixin parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headerParallax {
+  @include parallax;
+  min-height: 100vh;
+  background-image: url("../../assets/images/laptop-coffee.jpg");
+}
+
+.aboutMeParallax {
+  @include parallax;
+  min-height: 80vh;
+  background-image: url("../../assets/images/aboutMe.jpg");
+}
+
+.contactParallax {
+  @include parallax;
+  min-height: 80vh;
+  background-image: url("../../assets/images/contact.jpg");
+}
+
+.header-font {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
