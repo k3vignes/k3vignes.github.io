@@ -7,6 +7,8 @@ import { Parallax } from "./components/Parallax/Parallax";
 import { Home } from "./components/Home/Home";
 import { AboutMe } from "./components/AboutMe/AboutMe";
 import { Contact } from "./components/Contact/Contact";
+import { Footer } from "./components/Footer/Footer"; 
+
 
 export const App: React.FC = () => {
   return (
@@ -16,6 +18,7 @@ export const App: React.FC = () => {
       <Home />
       <AboutMe />
       <Contact />
+      <Footer />
     </div>
   );
 };
